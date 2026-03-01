@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/contact.css">
+    <title>Isha</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="ishalogo"></div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Teachers.html">Teachers</a>
+            <a href="">Sports</a>
+            <a href="">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div id="contact" class="contact">
+        <h2 class="cont">Contact</h2>
+        <div class="contact-form">
+        <div class="Name">
+            <input type="text" placeholder=" ">
+            <p class="name">Name</p>
+        </div>
+        <div class="Email">
+            <input type="email" class="mail" placeholder=" ">
+            <p class="email">Email</p>
+        </div>
+        <div class="message">
+            <textarea class="msg" rows="4" placeholder=" "></textarea>
+            <p class="mg">Message</p>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", () => {
+            document.getElementById("nav-links").classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

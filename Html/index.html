@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isha</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="ishalogo"></div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Teachers.html">Teachers</a>
+            <a href="">Sports</a>
+            <a href="">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source class="mobil_vid" src="../vid/VID-20260216-WA0009 (1).mp4" media="(max-width: 430px)">
+          <source class="desktop_vid" src="../vid/YouCut_20260222_194829369 (4).mp4" media="(min-width: 431px)">
+          </video>
+    </div>
+    <div class="container">
+        <h1>Why Choose Isha Vidhya?</h1>
+        <p>A premier committed to holistic education, nurturing young minds </p>
+        <p class="academics"> through academics, sports, arts, and character building </p>
+        <div class="campustree"></div>
+        <div class="images">
+            <div class="img1">
+                <div class="img1cont">
+                    The school focuses on rural education, highlighting progress and support for village
+                    communities.
+                </div>
+            </div>
+            <div class="img2">
+                <div class="img2cont">It shapes our future and teaches us lessons that stay with us throughout life.
+                </div>
+            </div>
+            <div class="img3">
+                <div class="img3cont">which shows teamwork and friendship. Studying with friends helps in better
+                    understanding.</div>
+            </div>
+            <div class="img4">
+                <div class="img4cont">About technology-based education, skill development, and empowering students for a
+                    bright future in the digital world.</div>
+            </div>
+            <div class="img5">
+                <div class="img5cont">inspiring children to dream about becoming doctors and helping society in the
+                    future.</div>
+            </div>
+        </div>
+        <div class="scores">
+            <div class="result12">
+                <div class="topleft"></div>
+                <div class="mark">
+                    <h2 class="counter" data-target="95">0</h2>
+                    <h3>12th 2025</h3>
+                    <h5>More than 90%</h5>
+                </div>
+                <div class="topright"></div>
+            </div>
+            <div class="result10">
+                <div class="topleft"></div>
+                <div class="mark">
+                    <h2 class="counter" data-target="90">0</h2>
+                    <h3>10th 2025</h3>
+                    <h5>More than 90%</h5>
+                </div>
+                <div class="topright"></div>
+            </div>
+            <div class="result12th">
+                <div class="topleft">
+                   
+                </div>
+                <div class="mark">
+                    <h2 class="counter" data-target="50">0</h2>
+                    <h3>10th 2025</h3>
+                    <h5 class="downbox">100 out of <br>  100 Mark</h5>
+                </div>
+                <div class="topright">
+                </div>
+            </div>
+            <div class="result10th">
+                <div class="topleft"></div>
+                <div class="mark">
+                    <h2 class="counter" data-target="60">0</h2>
+                    <h3>12th 2025</h3>
+                    <h5 class="downbox">100 out of <br>100 Mark</h5>
+                    </div>
+                <div class="topright">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const counterIntervals = new WeakMap();
+
+        function startCounter(el) {
+          if (counterIntervals.has(el)) {
+            clearInterval(counterIntervals.get(el));
+            counterIntervals.delete(el);
+          }
+
+          const target = parseInt(el.dataset.target, 10);
+          let count = 0;
+          el.textContent = 0;
+
+          const interval = setInterval(() => {
+            count++;
+            el.textContent = count;
+            if (count >= target) {
+              clearInterval(interval);
+              counterIntervals.delete(el);
+              el.textContent = target;
+            }
+          }, 40);
+          counterIntervals.set(el, interval);
+        }
+
+        function resetCounter(el) {
+          if (counterIntervals.has(el)) {
+            clearInterval(counterIntervals.get(el));
+            counterIntervals.delete(el);
+          }
+          el.textContent = 0;
+        }
+
+        const counters = document.querySelectorAll(".counter");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                startCounter(entry.target);
+              } else {
+                resetCounter(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3, rootMargin: "0px 0px -50px 0px" }
+        );
+
+        counters.forEach((c) => observer.observe(c));
+
+        document.getElementById("menu-toggle").addEventListener("click", () => {
+          document.getElementById("nav-links").classList.toggle("active");
+        });
+      </script>
+</body>
+
+</html>
