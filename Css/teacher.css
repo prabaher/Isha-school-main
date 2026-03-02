@@ -54,7 +54,7 @@ body {
     margin: 26px;
   }
   
-  @media screen and (min-width: 431px) {
+  @media screen and (min-width: 500px) {
     nav {
       display: flex !important;
     }
@@ -223,7 +223,7 @@ h1 {
 
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
     .img1cont,
     .img3cont,
     .img5cont{
@@ -371,7 +371,7 @@ h1 {
     justify-content: center;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
     body {
         overflow-x: hidden;
     }
@@ -503,7 +503,7 @@ h1 {
     .img6cont {
         position: relative;
         width: 100%;
-        font-size: 16px;
+        font-size: 14px;
         padding: 12px;
         margin-top: 10px;
         left: 0 !important;

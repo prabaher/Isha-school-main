@@ -53,7 +53,7 @@ nav {
   margin: 26px;
 }
 
-@media screen and (min-width: 431px) {
+@media screen and (min-width: 500px) {
   nav {
     display: flex !important;
   }
@@ -433,10 +433,8 @@ p {
   align-items: center;
   font-size: 15px;
 }
-/* ============================= */
-/* MOBILE VIEW (375px width) */
-/* ============================= */
-@media screen and (max-width: 430px) {
+
+@media screen and (max-width: 500px) {
   body {
     overflow-x: hidden;
   }
@@ -593,54 +591,4 @@ p {
     z-index: 2;
     pointer-events: none;
   }
-}
-
-/* Tablet (431px - 768px) */
-@media screen and (min-width: 431px) and (max-width: 768px) {
-
-  .images {
-    gap: 15px;
-  }
-
-  .img1,
-  .img2,
-  .img3,
-  .img4,
-  .img5 {
-    min-width: 140px;
-  }
-}
-
-.src90 {
-  width: 100px;
-  height: 50px;
-  border: 2px solid brown;
-  position: relative;
-  left: 100px;
-  top: 800px;
-}
-
-.topleft h3 {
-  color: black;
-  font-size: clamp(24px, 4vw, 30px);
-  margin-bottom: 4px;
-}
-
-.topleft h2 {
-  color: black;
-  font-size: clamp(16px, 2.5vw, 20px);
-  margin-bottom: 4px;
-}
-
-.topleft h5 {
-  color: black;
-  font-size: clamp(14px, 2vw, 20px);
-  font-weight: 500;
-  width: 100%;
-}
-
-.topleft .downbox {
-  color: black;
-  font-size: clamp(12px, 1.8vw, 18px);
-  font-weight: 500;
 }
